@@ -22,6 +22,8 @@ SubQueries, Views
 
 ## SQL QUERY :
 
+INSERT INTO stud(id,name,marks,age) VALUES(6,'dhanraj',85,23);
+
  INSERT INTO stud(id,name,marks,age) VALUES(8,'raj',75,22);
 
  ## OUTPUT :
