@@ -11,11 +11,12 @@ SubQueries, Views
 
 ## SQL QUERY :
 
- CREATE VIEW student AS SELECT id,name,marks,age FROM stud WHERE age<20;
+ CREATE VIEW student AS SELECT id,name,age FROM stud WHERE id < 2;
 
  ## OUTPUT :
 
-![Screenshot 2023-09-25 232741](https://github.com/Abrinnisha6/EX-3-SubQueries-Views-and-Joins/assets/118889454/204c8d42-78a4-47aa-b947-1d3ad48b628d)
+![Screenshot 2023-09-25 234916](https://github.com/Abrinnisha6/EX-3-SubQueries-Views-and-Joins/assets/118889454/0ba4cc4e-daca-4b10-975e-c7a9edd1c79b)
+
 
 ###  INSERT VIEW :
 
