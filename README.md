@@ -94,7 +94,7 @@ CREATE VIEW minimum AS select ENAME,JOB,SALARY from EMP
 ```
 select ENAME,JOB from EMP where  DEPTNO=10 AND JOB='SALESMAN';
 ```
-#### OUTPUT :
+### OUTPUT :
 
 ![image](https://github.com/Abrinnisha6/EX-3-SubQueries-Views-and-Joins/assets/118889454/638651a0-6272-45bb-a339-190ce530ab63)
 
