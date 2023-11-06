@@ -67,9 +67,9 @@ INSERT INTO DEPT (DEPTNO, DNAME, LOC) VALUES (40, 'OPERATIONS', 'BOSTON');
 ### Q1) List the name of the employees whose salary is greater than that of employee with empno 7566.
 
 ### QUERY :
-
+```
 CREATE VIEW details AS SELECT ENAME FROM EMP WHERE SALARY >(select SALARY from EMP where EMPNO=7566);
-
+```
 ### OUTPUT :
 
 ![image](https://github.com/Abrinnisha6/EX-3-SubQueries-Views-and-Joins/assets/118889454/fc68ea43-3d4a-4316-85b2-27a411e26a9c)
@@ -77,19 +77,19 @@ CREATE VIEW details AS SELECT ENAME FROM EMP WHERE SALARY >(select SALARY from E
 ### Q2) List the ename,job,sal of the employee who get minimum salary in the company.
 
 ### QUERY :
+```
+CREATE VIEW minimum AS select ENAME,JOB,SALARY from EMP where SALARY =(select MIN(SALARY) from EMP);
+```
+### OUTPUT :
 
- CREATE VIEW minimum AS select ENAME,JOB,SALARY from EMP where SALARY =(select MIN(SALARY) from EMP);
-
- ### OUTPUT :
-
- ![image](https://github.com/Abrinnisha6/EX-3-SubQueries-Views-and-Joins/assets/118889454/5dfbb4d7-066e-47cc-b284-76c13bbb5e45)
+![image](https://github.com/Abrinnisha6/EX-3-SubQueries-Views-and-Joins/assets/118889454/5dfbb4d7-066e-47cc-b284-76c13bbb5e45)
 
 ### Q3) List ename, job of the employees who work in deptno 10 and his/her job is any one of the job in the department ‘SALES’.
 
 ### QUERY :
-
+```
 select ENAME,JOB from EMP where  DEPTNO=10 AND JOB='SALESMAN';
-
+```
 #### OUTPUT :
 
 ![image](https://github.com/Abrinnisha6/EX-3-SubQueries-Views-and-Joins/assets/118889454/638651a0-6272-45bb-a339-190ce530ab63)
@@ -97,9 +97,9 @@ select ENAME,JOB from EMP where  DEPTNO=10 AND JOB='SALESMAN';
 ### Q4) Create a view empv5 (for the table emp) that contains empno, ename, job of the employees who work in dept 10.
 
 ### QUERY :
-
+```
 create view empv5 as select EMPNO,ENAME,JOB from EMP where DEPTNO=10;
-
+```
 ### OUTPUT :
 
 ![image](https://github.com/Abrinnisha6/EX-3-SubQueries-Views-and-Joins/assets/118889454/34fe6830-93e4-4884-85ff-7b6cb1855eb7)
@@ -107,9 +107,9 @@ create view empv5 as select EMPNO,ENAME,JOB from EMP where DEPTNO=10;
 ### Q5) Create a view with column aliases empv30 that contains empno, ename, sal of the employees who work in dept 30. Also display the contents of the view.
 
 ### QUERY :
-
+```
 create view empv30 AS select EMPNO,ENAME,SALARY from EMP where DEPTNO=30;
-
+```
 ### OUTPUT:
 
 ![image](https://github.com/Abrinnisha6/EX-3-SubQueries-Views-and-Joins/assets/118889454/eb51775e-211d-4497-8c37-b89b1db98be5)
@@ -117,12 +117,12 @@ create view empv30 AS select EMPNO,ENAME,SALARY from EMP where DEPTNO=30;
 ### Q6) Update the view empv5 by increasing 10% salary of the employees who work as ‘CLERK’. Also confirm the modifications in emp table
 
 ### QUERY:
-
+```
 update EMP set SALARY=SALARY*1.1 WHERE JOB='clerk';
 
 create view empv5 as select EMPNO,ENAME,SALARY,JOB from EMP;
-
-### OUTPUT:
+```
+### OUTPUT :
 
 ![image](https://github.com/Abrinnisha6/EX-3-SubQueries-Views-and-Joins/assets/118889454/12ffaa4a-d457-4aa9-8ee3-e88bc27f497f)
 
